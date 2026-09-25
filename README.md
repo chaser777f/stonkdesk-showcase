@@ -6,7 +6,9 @@ Built with AI-assisted development. This public repository contains screenshots 
 
 ## What it does
 
-StonkDesk brings retained company filings, historical price context, macro observations, and collection health into a local research interface. Each source keeps its own dates and evidence references. Opening a research page reads retained data rather than starting a new acquisition.
+StonkDesk organizes company research and shows where information is missing, outdated, or difficult to compare. It keeps source dates and warnings visible instead of presenting uncertain information as settled fact.
+
+It brings company filings, historical prices, economic indicators, and data-collection checks into a local research interface. Opening a research page uses saved data without starting a new download.
 
 The interesting part is handling imperfect inputs: missing observations stay missing, overlapping accounting concepts stay unresolved, and a requested date range is distinguished from the data actually returned.
 
@@ -16,7 +18,7 @@ The interesting part is handling imperfect inputs: missing observations stay mis
 
 ![Synthetic research brief showing separate source dates and missing-evidence warnings](images/research-brief.png)
 
-This example has company and market evidence but no macro acquisition or retained watchlist notice. The page exposes those gaps and keeps overlapping debt observations unresolved.
+This example has company and price data, but no saved economic data or change notice for the watchlist. The page shows those gaps. It also flags overlapping debt figures instead of adding them together and counting the same debt twice.
 
 ## Company comparison
 
@@ -28,8 +30,8 @@ The comparison aligns metric names while preserving each company's reporting per
 
 | Situation | How it is represented |
 | --- | --- |
-| No retained change notice | Missing evidence, rather than a claim that nothing changed |
-| No retained macro acquisition | An unavailable section with an explicit warning |
+| No saved change notice | Missing evidence, rather than a claim that nothing changed |
+| No saved economic data | An unavailable section with an explicit warning |
 | Overlapping debt concepts | An unresolved value rather than double-counting |
 | Different reporting periods | Each company's own period is retained |
 | Returned market data ends before the requested range | A separate latest-observation date and an explicit warning |
@@ -42,7 +44,7 @@ This is an ongoing personal project, not a public trading service. There is no h
 
 For this showcase, the research and comparison pages were opened and visually checked using isolated synthetic fixtures. The implementation and automated test sources were also reviewed for the behaviors described here; the full automated suite was not rerun for this publication. These checks are separate from manual testing performed by the project owner.
 
-The screenshots demonstrate interface behavior, not provider reliability, investment performance, or production readiness. Historical adjusted series and current-vintage macro observations should not be treated as point-in-time backtest evidence.
+The screenshots demonstrate interface behavior, not provider reliability, investment performance, or production readiness. Adjusted historical prices and economic figures downloaded today may include later revisions. They do not establish exactly what someone could have known at an earlier date.
 
 ## About
 
